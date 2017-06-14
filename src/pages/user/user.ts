@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavParams } from 'ionic-angular';
+import { NavParams, NavController } from 'ionic-angular';
 
 @Component({
   selector: 'page-user',
@@ -10,9 +10,13 @@ export class UserPage {
 
    name: string;
 
-  constructor(private navParams: NavParams){
+  constructor(private navParams: NavParams, private navCtrl: NavController){
     //takes in the navParamters from the users component
     this.name = navParams.get("username");
+  }
+
+  onGoBack(){
+    this.navCtrl.pop();
   }
 
 }
