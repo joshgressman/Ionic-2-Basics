@@ -17,4 +17,39 @@ export class UsersPage {
     this.navCtrl.push(UserPage, {username: username});
 }
 
+  //Lifecycle hooks
+
+  //fired when a new comp is loaded and is authorizrd / true
+  //Can be used for auth
+  ionViewCanEnter(): boolean | Promise<void>{
+   console.log('ionViewCanEnter');
+   const rnd = Math.random();
+   return rnd > 0.1;
+  }
+
+  // executes when loaded
+  ionViewDidLoad(){
+    console.log("ionViewDidLoad");
+  }
+
+  //executed before we see the view
+  ionViewWillEnter(){
+    console.log("ionViewWillEnter")
+  }
+
+  ionViewDidEnter(){
+    console.log("ionViewDidEnter");
+  }
+
+  // ionViewCanLeave(): boolean | Promise<void> {
+  //   const promise = new Promise((resolve, reject) => {
+  //     setTimeout(() => {
+  //       resolve()
+  //       }, 1000
+  //     );
+  //   });
+  //   return promise;
+  // }
+
+
 }
