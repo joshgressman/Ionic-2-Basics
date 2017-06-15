@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
 
 import { UsersPage } from '../users/users';
 
@@ -8,13 +7,6 @@ import { UsersPage } from '../users/users';
   templateUrl: 'home.html'
 })
 export class HomePage {
-
-  constructor(public navCtrl: NavController) {
-
-  }
-
-  toUsers(){
-    this.navCtrl.push(UsersPage);
-  }
-
+  //you can use properties and methods in the HTML instead of the navControl
+  usersPage = UsersPage;
 }

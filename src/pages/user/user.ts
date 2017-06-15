@@ -16,7 +16,7 @@ export class UserPage {
   }
 
   onGoBack(){
-    this.navCtrl.pop();
+    this.navCtrl.popToRoot();
   }
 
 }
